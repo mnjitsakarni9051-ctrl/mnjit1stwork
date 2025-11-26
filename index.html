@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Based Website</title>
+    <script>
+        let currentStep = 0;
+
+        function showNextStep() {
+            const steps = [
+                "पहला टास्क: कृपया यह काम पूरा करें।",
+                "दूसरा टास्क: अब यह काम पूरा करें।",
+                "तीसरा टास्क: यह अंतिम काम है, कृपया इसे भी पूरा करें।",
+                "आपने सभी टास्क पूरे कर लिए हैं। अब आप फाइल डाउनलोड कर सकते हैं।"
+            ];
+
+            if (currentStep < steps.length) {
+                alert(steps[currentStep]);
+                currentStep++;
+            } else {
+                alert("सभी टास्क पूरे हो गए हैं, कृपया यहाँ क्लिक करें और फाइल डाउनलोड करें।");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>वबसाइट में आपका स्वागत है</h1>
+    <button onclick="showNextStep()">एक टास्क आगे बढ़ाएं</button>
+</body>
+</html>
